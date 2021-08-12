@@ -1,8 +1,9 @@
-package com.bigbrain.expenses
+package com.bigbrain.expenses.fragment
 
 import android.os.Bundle
 import android.view.*
 import androidx.fragment.app.Fragment
+import com.bigbrain.expenses.R
 
 /**
  * A simple [Fragment] subclass.

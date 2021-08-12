@@ -34,8 +34,8 @@ class MainActivity : AppCompatActivity() {
         NavigationUI.setupWithNavController(bottomNavView, navHostFragment.navController)
 
         //var appBarConfiguration = AppBarConfiguration(navHostFragment.navController.graph)
-        var appBarConfiguration = AppBarConfiguration(setOf(R.id.homeFragment, R.id.searchFragment, R.id.notificationsFragment, R.id.profileFragment))
-        setupActionBarWithNavController(navHostFragment.navController, appBarConfiguration)
+//        var appBarConfiguration = AppBarConfiguration(setOf(R.id.homeFragment, R.id.searchFragment, R.id.notificationsFragment, R.id.profileFragment))
+//        setupActionBarWithNavController(navHostFragment.navController, appBarConfiguration)
     }
 
     fun showBottomNavigation()

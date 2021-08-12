@@ -7,17 +7,17 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.bigbrain.expenses.HomeFragment"
+        android:name="com.bigbrain.expenses.fragment.HomeFragment"
         android:label="Home"
         tools:layout="@layout/fragment_home" />
     <fragment
         android:id="@+id/searchFragment"
-        android:name="com.bigbrain.expenses.SearchFragment"
+        android:name="com.bigbrain.expenses.fragment.SearchFragment"
         android:label="Search"
         tools:layout="@layout/fragment_search" />
     <fragment
         android:id="@+id/notificationsFragment"
-        android:name="com.bigbrain.expenses.NotificationsFragment"
+        android:name="com.bigbrain.expenses.fragment.NotificationsFragment"
         android:label="Notifications"
         tools:layout="@layout/fragment_notifications" >
         <action
@@ -26,12 +26,12 @@
     </fragment>
     <fragment
         android:id="@+id/profileFragment"
-        android:name="com.bigbrain.expenses.ProfileFragment"
+        android:name="com.bigbrain.expenses.fragment.ProfileFragment"
         android:label="Profile"
         tools:layout="@layout/fragment_profile" />
     <fragment
         android:id="@+id/notificationDetailsFragment"
-        android:name="com.bigbrain.expenses.NotificationDetailsFragment"
+        android:name="com.bigbrain.expenses.fragment.NotificationDetailsFragment"
         android:label="Notification Details"
         tools:layout="@layout/fragment_notification_details" />
 </navigation>
