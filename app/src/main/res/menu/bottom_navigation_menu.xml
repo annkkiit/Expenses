@@ -3,7 +3,7 @@
 
     <item android:id="@+id/homeFragment"
         android:title="Home"
-        android:icon="@drawable/home_icon"/>
+        android:icon="@drawable/house_icon_unfilled"/>
 
     <item android:id="@+id/searchFragment"
         android:title="Search"
@@ -11,7 +11,7 @@
 
     <item android:id="@+id/notificationsFragment"
         android:title="Notifications"
-        android:icon="@drawable/notif_icon"/>
+        android:icon="@drawable/notif_icon_unfilled"/>
 
     <item android:id="@+id/profileFragment"
         android:title="Profile"
