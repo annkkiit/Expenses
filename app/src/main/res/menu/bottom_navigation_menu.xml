@@ -13,8 +13,5 @@
         android:title="Notifications"
         android:icon="@drawable/notif_icon"/>
 
-    <item android:id="@+id/profileFragment"
-        android:title="Profile"
-        android:icon="@drawable/profile_icon"/>
 
 </menu>
