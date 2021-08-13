@@ -1,9 +1,12 @@
 package com.bigbrain.expenses.fragment
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.*
+import androidx.cardview.widget.CardView
 import androidx.fragment.app.Fragment
 import com.bigbrain.expenses.R
+import com.bigbrain.expenses.VideoHelperActivity
 import org.jitsi.meet.sdk.JitsiMeet
 import org.jitsi.meet.sdk.JitsiMeetActivity
 import org.jitsi.meet.sdk.JitsiMeetConferenceOptions
@@ -16,6 +19,7 @@ import java.net.URL
  */
 class SearchFragment : Fragment() {
 
+    private lateinit var button_video : CardView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setHasOptionsMenu(true)
@@ -28,18 +32,13 @@ class SearchFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val serverURL: URL
-        serverURL = try {
-            URL("https://meet.jit.si")
-        } catch (e: MalformedURLException) {
-            e.printStackTrace()
-            throw RuntimeException("Invalid server URL!")
+        button_video = view.findViewById(R.id.button)
+
+        button_video.setOnClickListener {
+            var i = Intent(view.context, VideoHelperActivity::class.java)
+            startActivity(i)
         }
-        val defaultOptions = JitsiMeetConferenceOptions.Builder()
-            .setServerURL(serverURL)
-            .setWelcomePageEnabled(false)
-            .build()
-        JitsiMeet.setDefaultConferenceOptions(defaultOptions)
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
@@ -47,20 +46,5 @@ class SearchFragment : Fragment() {
         true
     }
 
-    fun onjitsi(view: View) {
 
-//        EditText editText = findViewById(R.id.conferenceName);
-        val text = "Expert Consultant"
-
-        if (text.length > 0) {
-            // Build options object for joining the conference. The SDK will merge the default
-            // one we set earlier and this one when joining.
-            val options = JitsiMeetConferenceOptions.Builder()
-                .setRoom(text)
-                .build()
-            // Launch the new activity with the given options. The launch() method takes care
-            // of creating the required Intent and passing the options.
-            JitsiMeetActivity.launch(getApplicationContext(), options)
-        }
-    }
 }
