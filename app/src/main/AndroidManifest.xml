@@ -9,13 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Expenses">
-        <activity android:name=".VideoHelperActivity"></activity>
-        <activity android:name=".UserGuideLayout">
+        <activity android:name=".VideoHelperActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".UserGuideLayout">
+
         </activity>
         <activity android:name=".MainActivity"></activity>
 
